@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eff2f5;
+}
+
+.title h2::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 45px;
+    background-color: rgb(21, 21, 21);
+    left: -20px;
+}
+
+.swiper-button-prev {
+    padding: 25px;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    padding: 25px;
+    background-image: url(../img/next.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.linkMore {
+    letter-spacing: 0.1em;
+}
+
+.font-services {
+    font-size: 20px;
+}
+
+.footer-contact {
+    font-size: 10px;
+}
+
+/* if more than 768 */
+/* @media (min-width: ≥768px) {
+    .responsive-font-example {
+        font-size: 80px;
+    }
+} */
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 768px) {
+    .font-services {
+        font-size: 10px;
+    }
+}
