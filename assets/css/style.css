@@ -41,6 +41,24 @@ body {
     letter-spacing: 0.1em;
 }
 
+.btnCart {
+    letter-spacing: 0.1em;
+    background: none;
+    border-color: rgb(21, 21, 21);
+}
+
+.btnCheckout {
+    letter-spacing: 0.1em;
+    color: white;
+    background-color: rgb(21, 21, 21);
+    border-color: rgb(21, 21, 21);
+}
+
+.spanCount {
+    border: 2px;
+    border-color: rgb(21, 21, 21);
+}
+
 .font-services {
     font-size: 20px;
 }
