@@ -121,22 +121,24 @@
                     </div>
                     <div class="col-md-4 mt-md-0 mt-4">
                         <div class="d-flex flex-column py-2 px-3 border border-dark">
-                            <h5 class="text-uppercase fw-ligth mt-2">Shipping Data</h5>
-                            <div class="d-flex flex-row justify-content-end mt-3">
-                                <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Name" />
+                            <h5 class="text-uppercase fw-ligth mt-2">Detail Data</h5>
+                            <hr />
+                            <span class="mt-1 mb-1">Fullname </span>
+                            <span class="mt-1 mb-1">Phone </span>
+                            <span class="mt-1 mb-1">Address 1 </span>
+                            <span class="mt-1 mb-1">Address 2 </span>
+                            <p class="mt-1 mb-1">Notes</p>
+                            <div class="d-flex justify-content-end mt-2 mb-3">
+                                <button class="btn btn-primary rounded text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Changes</button>
                             </div>
-                            <div class="d-flex flex-row justify-content-end mt-3">
-                                <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Phone" />
+                            <!-- <div class="mt-1 d-flex justify-content-between mb-1">
+                                <span>Fullname </span>
+                                <span class="text-end">$ 30.00</span>
                             </div>
-                            <div class="d-flex flex-row justify-content-end mt-3">
-                                <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Addres 1" />
-                            </div>
-                            <div class="d-flex flex-row justify-content-end mt-3">
-                                <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Addres 2" />
-                            </div>
-                            <div class="d-flex flex-row justify-content-end mt-3">
-                                <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Note" />
-                            </div>
+                            <div class="mt-1 d-flex justify-content-between mb-1">
+                                <span>Subtotal (2 Products)</span>
+                                <span class="text-end">$ 30.00</span>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-4 mt-md-0 mt-4">
@@ -147,7 +149,11 @@
                                 <span class="text-end">$ 30.00</span>
                             </div>
                             <div class="d-flex justify-content-between mb-3">
-                                <span>Discount Code</span>
+                                <span>Voucher</span>
+                                <span class="text-end">$ 0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Shipping Fee</span>
                                 <span class="text-end">$ 0.00</span>
                             </div>
                             <hr />
@@ -156,13 +162,72 @@
                                 <span class="text-end">$ 30.00</span>
                             </div>
                             <a href="invoice.html" class="mb-3 mt-3">
-                                <button class="border-1 py-3 rounded btnCheckout text-uppercase w-100">Buy</button>
+                                <button class="border-1 py-3 rounded btnCheckout text-uppercase w-100">
+                                    <i class="bi bi-shield-fill-check"></i>
+                                    Buy
+                                </button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- modal order -->
+        <div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalOrderLabel">Complete Your Data</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <div class="d-flex flex-row">
+                            <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Your Text Here" />
+                        </div> -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="fullname" placeholder="fullname" />
+                            <label for="fullname">Fullname</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="address1" placeholder="Address" />
+                            <label for="address1">Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="address2" placeholder="Optional Address" />
+                            <label for="address2">Optional Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave a note here" id="notes" style="height: 100px"></textarea>
+                            <label for="notes">Notes</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="voucher" placeholder="Voucher Code" />
+                            <label for="voucher">Voucher Code (Optional)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="shipper" aria-label="Shipper">
+                                <option selected>Choose the Shipper</option>
+                                <option value="1">JNE</option>
+                                <option value="2">JNT</option>
+                                <option value="3">GOJEK/GRAB</option>
+                            </select>
+                            <label for="shipper">Shipper</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="checkout.html">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- footer -->
         <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-md-5 p-3">

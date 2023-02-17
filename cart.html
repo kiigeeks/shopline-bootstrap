@@ -88,9 +88,7 @@
                         </a>
                     </div>
                     <div class="d-none d-md-block col-6">
-                        <a href="checkout.html">
-                            <button class="border-1 px-4 py-3 rounded btnCheckout text-uppercase">Checkout Now</button>
-                        </a>
+                        <button class="border-1 px-4 py-3 rounded btnCheckout text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Checkout Now</button>
                     </div>
                 </div>
                 <div class="row mt-5">
@@ -148,36 +146,94 @@
                     </div>
                     <div class="col-md-4 mt-md-0 mt-4">
                         <div class="d-flex flex-column py-2 px-3 border border-dark">
-                            <div class="d-flex flex-row justify-content-end mt-3">
+                            <!-- <div class="d-flex flex-row justify-content-end mt-3">
                                 <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Your Code" />
-                                <button type="submit" class="btn btn-dark p-2 mx-2">
-                                    <!-- <i class="bi bi-search"></i> -->
-                                    Redeem
+                                <button type="submit" class="btn btn-dark p-2 mx-2"> -->
+                            <!-- <i class="bi bi-search"></i> -->
+                            <!-- Redeem
                                 </button>
                             </div>
-                            <hr />
+                            <hr /> -->
                             <h3 class="text-uppercase fw-ligth">Order Summary</h3>
                             <div class="mt-3 d-flex justify-content-between mb-3">
                                 <span>Subtotal (2 Products)</span>
                                 <span class="text-end">$ 30.00</span>
                             </div>
-                            <div class="d-flex justify-content-between mb-3">
+                            <!-- <div class="d-flex justify-content-between mb-3">
                                 <span>Discount Code</span>
                                 <span class="text-end">$ 0.00</span>
-                            </div>
+                            </div> -->
                             <hr />
                             <div class="fw-bold fs-4 d-flex justify-content-between mb-3">
                                 <span>Total</span>
                                 <span class="text-end">$ 30.00</span>
                             </div>
-                            <a href="checkout.html" class="mb-3 mt-3">
-                                <button class="border-1 py-3 rounded btnCheckout text-uppercase w-100">Checkout Now</button>
-                            </a>
+                            <div class="mb-3 mt-3">
+                                <!-- <a href="checkout.html" class="mb-3 mt-3"> -->
+                                <button class="border-1 py-3 rounded btnCheckout text-uppercase w-100" data-bs-toggle="modal" data-bs-target="#modalOrder">Checkout Now</button>
+                                <!-- </a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- modal order -->
+        <div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalOrderLabel">Complete Your Data</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <div class="d-flex flex-row">
+                            <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Your Text Here" />
+                        </div> -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="fullname" placeholder="fullname" />
+                            <label for="fullname">Fullname</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="phone" placeholder="Phone Number" />
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="address1" placeholder="Address" />
+                            <label for="address1">Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="address2" placeholder="Optional Address" />
+                            <label for="address2">Optional Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave a note here" id="notes" style="height: 100px"></textarea>
+                            <label for="notes">Notes</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="voucher" placeholder="Voucher Code" />
+                            <label for="voucher">Voucher Code (Optional)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="shipper" aria-label="Shipper">
+                                <option selected>Choose the Shipper</option>
+                                <option value="1">JNE</option>
+                                <option value="2">JNT</option>
+                                <option value="3">GOJEK/GRAB</option>
+                            </select>
+                            <label for="shipper">Shipper</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <a href="checkout.html">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- other product recomend -->
         <section class="pt-5 container mt-3 px-md-5">
