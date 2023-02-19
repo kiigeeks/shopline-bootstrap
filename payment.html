@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>Payment</title>
+
+        <!-- bootstrap icon  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+        <!-- cdn bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white">
+            <div class="container px-md-5">
+                <a class="navbar-brand fs-4 fw-bold" href="index.html">SHOPLINE.</a>
+                <div class="order-md-2 d-flex flex-row gap-3">
+                    <a href="cart.html">
+                        <button class="border-0 position-relative bg-white">
+                            <i class="bi bi-cart-fill fs-5"></i>
+                            <span class="fw-light position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
+                        </button>
+                    </a>
+                    <button class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#seacrhModal">
+                        <i class="bi bi-search fs-5"></i>
+                    </button>
+                </div>
+                <button class="navbar-toggler order-md-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="article.html">Article</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- modal search -->
+        <div class="modal fade" id="seacrhModal" tabindex="-1" aria-labelledby="seacrhModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3 fw-bold" id="seacrhModalLabel">What are you looking for?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-row">
+                            <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Your Text Here" />
+                            <button type="submit" class="btn btn-primary p-2 mx-2" style="width: 50px" data-bs-dismiss="modal">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- payment -->
+        <section class="pt-5 container mt-5 px-md-5">
+            <div class="container">
+                <!-- countdown -->
+                <div class="row">
+                    <div class="col text-center">
+                        <span class="fs-4 fw-semibold">Complete Payment in</span>
+                        <h2 class="fw-bold fs-2">23:23:23</h2>
+                        <span class="text-muted fw-medium fs-6">Before</span>
+                        <h5 class="fs-5 fw-normal">Sunday, 14 January 2023, 13:33:00 WIB</h5>
+                    </div>
+                </div>
+                <!-- Invoice -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-4">
+                        <div class="d-flex flex-column py-2 px-3 border border-dark">
+                            <div class="d-flex justify-content-between mb-3 mt-3 align-items-center">
+                                <div class="d-flex flex-column">
+                                    <span class="text-muted fst-italic fs-6">No. Invoice</span>
+                                    <span class="fw-medium">IVR/20230206/XXIII/II/1570003</span>
+                                </div>
+                                <button class="border-0 bg-transparent">
+                                    <i class="bi bi-clipboard-check-fill fs-4 text-muted"></i>
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3 align-items-center">
+                                <div class="d-flex flex-column">
+                                    <span class="text-muted fst-italic fs-6">Total</span>
+                                    <span class="fw-bold fs-5">$ 30.00</span>
+                                </div>
+                                <button class="border-0 bg-transparent text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#detailModal">Detail</button>
+                            </div>
+                            <div class="d-flex justify-content-end mb-3 text-end">
+                                <button class="border-0 py-2 px-4 rounded btnChanges text-uppercase w-md-50" data-bs-toggle="modal" data-bs-target="#modalOrder">
+                                    <i class="bi bi-printer-fill"></i>
+                                    Print Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- rekening -->
+                <div class="row justify-content-center mt-4 text-center">
+                    <div class="col d-flex flex-column align-items-center gap-3">
+                        <span class="fs-3 fw-bold">Transfer to</span>
+                        <img src="./assets/img/bca.png" alt="Logo BCA" class="w-md-25 mb-3 text-center" />
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row gap-2">
+                                <h2 class="fw-semibold fs-3">111 222 3334</h2>
+                                <button class="border-0 bg-transparent align-self-start">
+                                    <i class="bi bi-clipboard-check-fill fs-5 text-muted"></i>
+                                </button>
+                            </div>
+                            <span class="text-muted fw-medium fst-italic">PT Lorem ipsum</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- faq -->
+                <div class="row justify-content-center mt-5 mb-5">
+                    <div class="col-md-5">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed text-uppercase fw-semibold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How to Pay my Order
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the
+                                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any
+                                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- call hotline / Continue shopping -->
+                <div class="row justify-content-center mt-3 text-center">
+                    <div class="col-md-3">
+                        <button class="border-1 py-3 rounded btnCart text-uppercase w-100">
+                            <i class="bi bi-telephone-forward-fill"></i>
+                            Contact Hotline
+                        </button>
+                    </div>
+                    <div class="col-md-3 mt-md-0 mt-3">
+                        <button class="border-1 py-3 rounded btnCheckout text-uppercase w-100">
+                            <i class="bi bi-bag-check-fill"></i>
+                            Continue Shopping
+                        </button>
+                    </div>
+                </div>
+                <!-- greeting -->
+                <div class="row mt-5">
+                    <div class="col text-center">
+                        <h1 class="fw-light fs-3 fst-italic">Thanks for the order</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- modal detail -->
+        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3 fw-bold" id="detailModalLabel">Your Order</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div class="d-flex flex-column py-2 px-3 border border-dark">
+                                        <h5 class="text-uppercase fw-ligth mt-2">Order Summary</h5>
+                                        <div class="mt-3 d-flex justify-content-between mb-3">
+                                            <span>Subtotal (2 Products)</span>
+                                            <span class="text-end">$ 30.00</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Voucher</span>
+                                            <span class="text-end">$ 0.00</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>Shipping Fee</span>
+                                            <span class="text-end">$ 0.00</span>
+                                        </div>
+                                        <hr />
+                                        <div class="fw-bold fs-4 d-flex justify-content-between mb-3">
+                                            <span>Total</span>
+                                            <span class="text-end">$ 30.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-md-4 mb-3">
+                                <div class="col">
+                                    <div class="d-flex flex-column py-2 px-3 border border-dark">
+                                        <h5 class="text-uppercase fw-ligth mt-2">Detail Data</h5>
+                                        <hr />
+                                        <div class="container d-flex flex-column gap-3">
+                                            <div class="row">
+                                                <div class="col-2">Shipper</div>
+                                                <div class="col-1">:</div>
+                                                <div class="col-8 text-start">JNE</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-2">To</div>
+                                                <div class="col-1">:</div>
+                                                <div class="col-8 text-start">
+                                                    <div class="d-flex flex-column">
+                                                        <span class="mt-1 mb-1">Fullname </span>
+                                                        <span class="mt-1 mb-1">Phone </span>
+                                                        <span class="mt-1 mb-1">Address 1 </span>
+                                                        <span class="mt-1 mb-1">Address 2 </span>
+                                                        <p class="mt-1 mb-1">Notes</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="text-uppercase fw-ligth mt-2">List Products (2)</h5>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <div class="container d-flex flex-column gap-md-3 gap-2">
+                                        <div class="row mt-2 d-flex flex-row justify-content-evenly">
+                                            <div class="col-4">
+                                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="img-md-fluid rounded mx-auto" width="100" height="100" />
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <div class="mt-2 d-flex flex-column">
+                                                    <h5>Title Product 1</h5>
+                                                    <p>$ 30.00</p>
+                                                    <span>1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row d-flex flex-row justify-content-evenly">
+                                            <div class="col-4">
+                                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="img-md-fluid rounded mx-auto" width="100" height="100" />
+                                            </div>
+                                            <div class="col-6 text-start">
+                                                <div class="mt-2 d-flex flex-column">
+                                                    <h5>Title Product 2</h5>
+                                                    <p>$ 20.00</p>
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-md-5 p-3">
+            <div class="container px-md-5">
+                <div class="row">
+                    <div class="col-md-4 mt-md-0 mt-4">
+                        <div class="p-md-3 d-flex flex-column">
+                            <h2 class="fw-bold fs-4">SHOPLINE.</h2>
+                            <p class="fs-6 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea unde doloremque molestias ipsam numquam alias accusamus quam a! Laborum, amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-md-0 mt-4">
+                        <div class="p-md-3 d-flex flex-md-row flex-column justify-content-around">
+                            <ul class="list-unstyled">
+                                <li class="">
+                                    <a href="index.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="products.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="article.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        Article
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="">
+                                    <a href="index.html#check" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        Transaction
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="cart.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        Cart
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="faq.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        FAQ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-md-0 mt-4">
+                        <div class="p-md-3 d-flex flex-column">
+                            <h5 class="fw-semibold">Contact</h5>
+                            <div class="d-flex flex-row mt-1 mx-2 gap-3">
+                                <i class="bi bi-building"></i>
+                                <span class="fs-6 text-light footer-contact">Jl. Lorem ipsum dolor, amet, Indonesia</span>
+                            </div>
+                            <div class="d-flex flex-row mt-1 mx-2 gap-3">
+                                <i class="bi bi-telephone-outbound-fill"></i>
+                                <span class="fs-6 text-light footer-contact">0812 3345 3456</span>
+                            </div>
+                            <div class="d-flex flex-row mt-1 mx-2 gap-3">
+                                <i class="bi bi-envelope-check-fill"></i>
+                                <span class="fs-6 text-light footer-contact">email@gmail.com</span>
+                            </div>
+                            <img class="w-75 mt-3" src="https://www.pngarts.com/files/10/Credit-Card-Trust-Badges-PNG-Image.png" alt="payment" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-md-4 mt-5">
+                    <div class="col text-center d-flex flex-column">
+                        <div class="d-flex flex-row gap-4 justify-content-center">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-instagram fs-3"></i>
+                            </a>
+                            <a href="#" class="text-white">
+                                <i class="bi bi-facebook fs-3"></i>
+                            </a>
+                            <a href="#" class="text-white">
+                                <i class="bi bi-youtube fs-3"></i>
+                            </a>
+                            <a href="#" class="text-white">
+                                <i class="bi bi-whatsapp fs-3"></i>
+                            </a>
+                        </div>
+                        <div class="mt-1">
+                            <hr />
+                        </div>
+                        <div class="mt-1">
+                            <p>Support by <b>Kiigeeks</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- cdn bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
+</html>
