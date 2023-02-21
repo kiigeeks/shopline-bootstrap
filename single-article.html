@@ -30,7 +30,7 @@
                             <span class="fw-light position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
                         </button>
                     </a>
-                    <button class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#seacrhModal">
+                    <button class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="bi bi-search fs-5"></i>
                     </button>
                 </div>
@@ -54,19 +54,21 @@
         </nav>
 
         <!-- modal search -->
-        <div class="modal fade" id="seacrhModal" tabindex="-1" aria-labelledby="seacrhModalLabel" aria-hidden="true">
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-3 fw-bold" id="seacrhModalLabel">What are you looking for?</h1>
+                        <h1 class="modal-title fs-3 fw-bold" id="searchModalLabel">What are you looking for?</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="d-flex flex-row">
                             <input type="text" class="bg-white py-2 px-3 form-control" placeholder="Your Text Here" />
-                            <button type="submit" class="btn btn-primary p-2 mx-2" style="width: 50px" data-bs-dismiss="modal">
-                                <i class="bi bi-search"></i>
-                            </button>
+                            <a href="search.html">
+                                <button type="submit" class="btn btn-primary p-2 mx-2" style="width: 50px" data-bs-dismiss="modal">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +98,7 @@
                     </div>
                 </div>
                 <div class="row mt-md-5 mt-3">
-                    <div class="col">
+                    <div class="col text-justify">
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam sunt modi dolorem cumque, ex temporibus similique ducimus quisquam ad eum fuga blanditiis obcaecati at. Reiciendis recusandae voluptas accusamus
                             repellat veniam minus, pariatur, ipsum eligendi voluptatibus laboriosam id. Harum magni voluptates reprehenderit velit assumenda, recusandae accusantium architecto quibusdam, aliquid soluta eum.
@@ -117,13 +119,13 @@
             </div>
         </section>
 
-        <!-- product recomend -->
-        <section class="pt-5 container mt-3 px-md-5">
+        <!-- Related Products -->
+        <section class="pt-5 container mt-5 px-md-5">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <div class="title mx-2">
-                            <h2 class="position-relative d-inline-block">Products</h2>
+                            <h2 class="position-relative d-inline-block">Related Products</h2>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -135,7 +137,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="swiper">
-                            <div class="px-5 pb-5 mySwiper">
+                            <div class="px-5 pb-5 related-swiper">
                                 <div class="swiper-wrapper">
                                     <div class="card mx-2 swiper-slide">
                                         <img
@@ -145,6 +147,7 @@
                                         />
                                         <div class="card-body">
                                             <h5 class="card-title">Product title 1</h5>
+                                            <span class="badge text-bg-secondary">Suplemen</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -156,7 +159,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 2</h5>
+                                            <h5 class="card-title">Product title 2</h5>
+                                            <span class="badge text-bg-secondary">Suplemen</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -168,7 +172,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 3</h5>
+                                            <h5 class="card-title">Product title 3</h5>
+                                            <span class="badge text-bg-secondary">Body Care</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -180,7 +185,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 4</h5>
+                                            <h5 class="card-title">Product title 4</h5>
+                                            <span class="badge text-bg-secondary">Beauty</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -192,7 +198,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 5</h5>
+                                            <h5 class="card-title">Product title 5</h5>
+                                            <span class="badge text-bg-secondary">Suplemen</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -204,7 +211,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 6</h5>
+                                            <h5 class="card-title">Product title 6</h5>
+                                            <span class="badge text-bg-secondary">Beauty</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -216,7 +224,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 7</h5>
+                                            <h5 class="card-title">Product title 7</h5>
+                                            <span class="badge text-bg-secondary">Body Care</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -228,31 +237,8 @@
                                             alt="..."
                                         />
                                         <div class="card-body">
-                                            <h5 class="card-title">Products title 8</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <a href="single-product.html" class="btn btn-primary">Order</a>
-                                        </div>
-                                    </div>
-                                    <div class="card mx-2 swiper-slide">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
-                                            class="card-img-top"
-                                            alt="..."
-                                        />
-                                        <div class="card-body">
-                                            <h5 class="card-title">Products title 9</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                            <a href="single-product.html" class="btn btn-primary">Order</a>
-                                        </div>
-                                    </div>
-                                    <div class="card mx-2 swiper-slide">
-                                        <img
-                                            src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
-                                            class="card-img-top"
-                                            alt="..."
-                                        />
-                                        <div class="card-body">
-                                            <h5 class="card-title">Products title 10</h5>
+                                            <h5 class="card-title">Product title 8</h5>
+                                            <span class="badge text-bg-secondary">Beauty</span>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             <a href="single-product.html" class="btn btn-primary">Order</a>
                                         </div>
@@ -371,20 +357,7 @@
         <!-- swiperjs -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
-            var swiper = new Swiper(".carosel-swiper", {
-                spaceBetween: 30,
-                effect: "fade",
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
-
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".related-swiper", {
                 slidesPerView: 1,
                 spaceBetween: 20,
                 slidesPerGroup: 1,
