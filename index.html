@@ -16,25 +16,44 @@
         <!-- swiperjs -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+        <!-- aos -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white">
-            <div class="container px-md-5">
-                <a class="navbar-brand fs-4 fw-bold" href="index.html">SHOPLINE.</a>
-                <div class="order-md-2 d-flex flex-row gap-3">
-                    <a href="cart.html">
-                        <button class="border-0 position-relative bg-white">
-                            <i class="bi bi-cart-fill fs-5"></i>
-                            <span class="fw-light position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
-                        </button>
-                    </a>
-                    <button class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white" data-aos="fade-down">
+            <div class="container px-lg-5">
+                <a class="navbar-brand fs-4 fw-bold" href="index.html">HDI STORE.</a>
+                <div class="order-lg-2 d-flex flex-row gap-3">
+                    <button class="border-0 bg-white ms-3" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="bi bi-search fs-5"></i>
                     </button>
+
+                    <!-- <div class="dropdown d-none d-lg-block">
+                        <button class="border-0 bg-white justify-content-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill fs-3"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="transactions.html">Transaction</a></li>
+                            <hr class="hr-menu mx-auto">
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </div> -->
+
+                    <a href="cart.html">
+                        <button class="border-0 position-relative bg-white">
+                            <i class="bi bi-cart-fill fs-4"></i>
+                            <span class="fw-light position-absolute mt-1 top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
+                        </button>
+                    </a>
+
+                    <a class="d-none d-lg-block btn btn-success ms-3" href="login.html">SIGN IN</a>
+                    <a class="d-none d-lg-block btn border-0 btn-signup" href="registrasi.html">SIGN UP</a>
                 </div>
-                <button class="navbar-toggler order-md-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler order-lg-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,8 +65,34 @@
                             <a class="nav-link links text-uppercase" href="products.html">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link links text-uppercase" href="article.html">Article</a>
+                            <a class="nav-link links text-uppercase" href="penyakit.html">Diseases</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="testimonial.html">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="article.html">Articles</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <hr />
+                        </li>
+                        <!-- kalau belum login  -->
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="login.html">Sign In</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="registrasi.html">Sign Up</a>
+                        </li>
+                        <!-- kalau sudah login  -->
+                        <!-- <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="dashboard.html">Hi, Orang</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="transactions.html">Transaction</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="#">Sign Out</a>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -76,12 +121,12 @@
         </div>
 
         <!-- hero section -->
-        <section class="pt-5 container mt-5 px-md-5">
+        <section class="pt-5 container mt-5 px-lg-5">
             <div class="container">
                 <div class="row">
                     <!-- carousel -->
-                    <div class="col-md-6">
-                        <div class="swiper carosel-swiper">
+                    <div class="col-lg-6">
+                        <div class="swiper carosel-swiper" data-aos="fade-down">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="object-fit-cover card-img rounded" height="400" width="300" />
@@ -102,16 +147,16 @@
                         </div>
                     </div>
                     <!-- service -->
-                    <div class="col-md-6 mt-md-0 mt-3 d-flex align-items-center">
+                    <div class="col-lg-6 mt-lg-0 mt-md-4 mt-3 d-flex align-items-center">
                         <div class="container">
                             <div class="row">
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="100" data-aos-duration="500">
                                     <div class="bg-white p-3 rounded text-center shadow-sm">
                                         <i class="bi bi-lightning-charge-fill fs-2 text-warning"></i>
-                                        <h5 class="font-services">Fast Respons</h5>
+                                        <h5 class="font-services">Fast Response</h5>
                                     </div>
                                 </div>
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="200" data-aos-duration="500">
                                     <div class="bg-white p-3 rounded text-center shadow-sm">
                                         <i class="bi bi-clock-fill fs-2 text-muted"></i>
                                         <h5 class="font-services">24 Hours Support</h5>
@@ -119,13 +164,13 @@
                                 </div>
                             </div>
                             <div class="row mt-md-4 mt-0">
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="300" data-aos-duration="500">
                                     <div class="bg-white p-3 rounded text-center shadow-sm">
                                         <i class="bi bi-box-fill fs-2 text-muted"></i>
                                         <h5 class="font-services">Free Shipping</h5>
                                     </div>
                                 </div>
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="400" data-aos-duration="500">
                                     <div class="bg-white p-3 h-100 rounded text-center shadow-sm">
                                         <i class="bi bi-telephone-outbound-fill fs-2 text-primary"></i>
                                         <h5 class="font-services">Call Hotline</h5>
@@ -133,13 +178,13 @@
                                 </div>
                             </div>
                             <div class="row mt-md-4 mt-0">
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="500" data-aos-duration="500">
                                     <div class="bg-white p-3 rounded text-center shadow-sm">
                                         <i class="bi bi-patch-check-fill fs-2 text-info"></i>
                                         <h5 class="font-services">Distributor Trusted</h5>
                                     </div>
                                 </div>
-                                <div class="col-6 mt-md-0 mt-2">
+                                <div class="col-6 mt-md-0 mt-2" data-aos="flip-left" data-aos-delay="600" data-aos-duration="500">
                                     <div class="bg-white p-3 h-100 rounded text-center shadow-sm">
                                         <i class="bi bi-shield-shaded fs-2 text-muted"></i>
                                         <h5 class="font-services">Product Guaranteed</h5>
@@ -152,65 +197,81 @@
             </div>
         </section>
 
-        <!-- form code -->
-        <section id="check" style="background-color: rgb(17 24 39)" class="text-white mt-5 p-5">
-            <div class="container-fluid mt-5 mb-5">
-                <div class="row">
+        <!-- about us -->
+        <section id="us" style="background-color: rgb(17 24 39)" class="text-white mt-5 py-5 px-md-5 px-3">
+            <div class="container-lg mt-5 mb-5">
+                <div class="row mb-5" data-aos="fade-up">
                     <div class="col text-center">
-                        <h2>Check Transcation</h2>
+                        <h2 class="fs-1">About Us</h2>
                     </div>
                 </div>
-                <form class="row mt-4 justify-content-center">
-                    <div class="col-md-8 d-flex flex-row justify-content-center">
-                        <input type="text" class="bg-white py-2 px-3 form-control" style="width: 350px" placeholder="Your Code Transaction" />
-                        <a href="transaction.html">
-                            <div class="btn btn-primary p-2 mx-2" style="width: 50px">
-                                <i class="bi bi-search"></i>
-                            </div>
-                        </a>
-                    </div>
-                </form>
-                <div class="row mt-3 justify-content-center text-center">
-                    <div class="col-md-4">
-                        <span class="text-white fs-6 fw-light fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sunt. </span>
+                <div class="px-lg-5 text-justify">
+                    <div class="row mt-4">
+                        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                            <h2 class="fw-bold fs-4">HDI STORE.</h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas aut dolorum eaque delectus vero debitis veniam deserunt fugit ut quis consequatur nihil nesciunt quibusdam sit alias rerum, nostrum voluptatum
+                                accusamus.
+                            </p>
+                        </div>
+                        <div class="col-md-6 mt-3 mt-lg-0" data-aos="fade-left" data-aos-duration="1000">
+                            <h3 class="fw-bold fs-5">HDI</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repudiandae veniam tenetur necessitatibus excepturi quam ullam, recusandae nulla quaerat molestiae, iure maxime earum dolorem est
+                                reprehenderit nisi quia enim saepe!
+                            </p>
+                            <a class="btn btn-danger" href="https://www.hdindonesia.com/">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- categories -->
-        <section class="pt-5 container mt-5 px-md-5">
+        <section class="pt-5 container mt-5 px-lg-5">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col">
-                        <div class="title mx-2">
+                        <div class="title mx-2" data-aos="fade-up">
                             <h2 class="position-relative d-inline-block">Categories</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-3">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-4 py-2 d-flex flex-row justify-content-evenly align-items-center" style="height: 100px">
-                            <img src="https://www.pngarts.com/files/3/Pills-PNG-Background-Image.png" alt="" class="w-50" />
-                            <h5>Suplements</h5>
+                <div class="row mt-2 flex flex-wrap">
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/healthy.png" alt="" class="w-25" />
+                            <p class="title-category">Health Nutritions</p>
                         </a>
                     </div>
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-4 py-2 d-flex flex-row justify-content-evenly align-items-center" style="height: 100px">
-                            <img src="https://www.pngarts.com/files/7/Health-Wellness-PNG-Image.png" alt="" class="w-25" />
-                            <h5>Body Care</h5>
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/beauty.png" alt="" class="w-25" />
+                            <p class="title-category">Beauty Skincare</p>
                         </a>
                     </div>
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-4 py-2 d-flex flex-row justify-content-evenly align-items-center" style="height: 100px">
-                            <img src="https://www.pngarts.com/files/11/Cosmetics-PNG-Free-Download.png" alt="" class="w-50" />
-                            <h5>Beauty</h5>
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/bodycare.png" alt="" class="w-25" />
+                            <p class="title-category">Body Care</p>
                         </a>
                     </div>
-                    <div class="col-md-3 mt-2 mt-md-0">
-                        <a href="article.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-4 py-2 d-flex flex-row justify-content-evenly align-items-center" style="height: 100px">
-                            <img src="https://www.pngarts.com/files/1/E-Learning-PNG-Free-Download.png" alt="" class="w-50" />
-                            <h5>Article</h5>
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="400">
+                        <a href="penyakit.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/penyakit.png" alt="" class="w-25" />
+                            <p class="title-category">Diseases</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="500">
+                        <a href="testimonial.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/testimonial.png" alt="" class="w-25" />
+                            <p class="title-category">Testimonial</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="600">
+                        <a href="article.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
+                            <img src="assets/icons/article.png" alt="" class="w-25" />
+                            <p class="title-category">Articles</p>
                         </a>
                     </div>
                 </div>
@@ -218,23 +279,23 @@
         </section>
 
         <!-- best seller -->
-        <section class="pt-5 container mt-3 px-md-5">
+        <section class="pt-5 container mt-3 px-lg-5">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="title mx-2">
+                        <div class="title mx-2" data-aos="fade-up">
                             <h2 class="position-relative d-inline-block">Best Seller</h2>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-end" data-aos="fade-up">
                             <a href="products.html" class="mt-2 text-end fw-light text-decoration-none text-black linkMore">More Products</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="swiper">
+                        <div class="swiper" data-aos="fade-left" data-aos-delay="100">
                             <div class="px-5 pb-5 seller-swiper">
                                 <div class="swiper-wrapper">
                                     <div class="card mx-2 swiper-slide">
@@ -379,22 +440,22 @@
         </section>
 
         <!-- news article -->
-        <section class="pt-5 container mt-3 px-md-5">
+        <section class="pt-5 container mt-3 px-lg-5">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="title mx-2">
-                            <h2 class="position-relative d-inline-block">News Article</h2>
+                        <div class="title mx-2" data-aos="fade-up">
+                            <h2 class="position-relative d-inline-block">News Articles</h2>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="d-flex justify-content-end">
-                            <a href="article.html" class="mt-2 text-end fw-light text-decoration-none text-black linkMore">More Article</a>
+                        <div class="d-flex justify-content-end" data-aos="fade-up">
+                            <a href="article.html" class="mt-2 text-end fw-light text-decoration-none text-black linkMore">More Articles</a>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-4 mt-md-0 mt-2">
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-4 mt-2" data-aos="fade-up" data-aos-delay="100">
                         <div class="card">
                             <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
                             <div class="card-body">
@@ -405,7 +466,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-2">
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-4 mt-2" data-aos="fade-up" data-aos-delay="200">
                         <div class="card">
                             <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
                             <div class="card-body">
@@ -416,7 +477,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-2">
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-4 mt-2" data-aos="fade-up" data-aos-delay="300">
                         <div class="card">
                             <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
                             <div class="card-body">
@@ -431,61 +492,127 @@
             </div>
         </section>
 
-        <!-- footer -->
-        <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-md-5 p-3">
-            <div class="container px-md-5">
-                <div class="row">
-                    <div class="col-md-4 mt-md-0 mt-4">
-                        <div class="p-md-3 d-flex flex-column">
-                            <h2 class="fw-bold fs-4">SHOPLINE.</h2>
-                            <p class="fs-6 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea unde doloremque molestias ipsam numquam alias accusamus quam a! Laborum, amet.</p>
+        <!-- news testimonial -->
+        <section class="pt-5 container mt-4 px-lg-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="title mx-2" data-aos="fade-up">
+                            <h2 class="position-relative d-inline-block">News Testimonial</h2>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-end" data-aos="fade-up">
+                            <a href="testimonial.html" class="mt-2 text-end fw-light text-decoration-none text-black linkMore">More Testimonial</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 row-cols-1 row-cols-lg-3">
+                    <div class="feature col col-md-6 mt-5" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient mb-3">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" alt="" class="icon-testi" />
+                        </div>
+                        <h3 class="fs-2">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="single-testimonial.html" class="icon-link d-inline-flex align-items-center">
+                            Read More
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                    <div class="feature col col-md-6 mt-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient mb-3">
+                            <img src="https://images.unsplash.com/photo-1487573884658-a5d3c667584e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80" alt="" class="icon-testi" />
+                        </div>
+                        <h3 class="fs-2">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="single-testimonial.html" class="icon-link d-inline-flex align-items-center">
+                            Read More
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                    <div class="feature col col-md-6 mt-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient mb-3">
+                            <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=888&q=80" alt="" class="icon-testi" />
+                        </div>
+                        <h3 class="fs-2">Featured title</h3>
+                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                        <a href="single-testimonial.html" class="icon-link d-inline-flex align-items-center">
+                            Read More
+                            <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-lg-5 p-md-2 p-3">
+            <div class="container px-lg-5">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mt-lg-0 mt-4" data-aos="fade-up">
+                        <div class="p-md-3 d-flex flex-column">
+                            <h2 class="fw-bold fs-4">HDI STORE.</h2>
+                            <p class="fs-6 fw-light text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea unde doloremque molestias ipsam numquam alias accusamus quam a! Laborum, amet.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-lg-0 mt-4" data-aos="fade-up">
                         <div class="p-md-3 d-flex flex-md-row flex-column justify-content-around">
                             <ul class="list-unstyled">
                                 <li class="">
                                     <a href="index.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Home
                                     </a>
                                 </li>
                                 <li class="">
                                     <a href="products.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Products
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="article.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
-                                        Article
+                                    <a href="penyakit.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Diseases
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="testimonial.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Testimonial
                                     </a>
                                 </li>
                             </ul>
                             <ul class="list-unstyled">
                                 <li class="">
-                                    <a href="index.html#check" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
-                                        Transaction
+                                    <a href="article.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Articles
                                     </a>
                                 </li>
                                 <li class="">
                                     <a href="cart.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Cart
                                     </a>
                                 </li>
                                 <li class="">
+                                    <a href="index.html#us" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="">
                                     <a href="faq.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         FAQ
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="d-none d-lg-block col-lg-4 mt-md-0 mt-4" data-aos="fade-up">
                         <div class="p-md-3 d-flex flex-column">
                             <h5 class="fw-semibold">Contact</h5>
                             <div class="d-flex flex-row mt-1 mx-2 gap-3">
@@ -505,16 +632,10 @@
                     </div>
                 </div>
                 <div class="row mt-md-4 mt-5">
-                    <div class="col text-center d-flex flex-column">
+                    <div class="col text-center d-flex flex-column" data-aos="fade-up">
                         <div class="d-flex flex-row gap-4 justify-content-center">
                             <a href="#" class="text-white">
                                 <i class="bi bi-instagram fs-3"></i>
-                            </a>
-                            <a href="#" class="text-white">
-                                <i class="bi bi-facebook fs-3"></i>
-                            </a>
-                            <a href="#" class="text-white">
-                                <i class="bi bi-youtube fs-3"></i>
                             </a>
                             <a href="#" class="text-white">
                                 <i class="bi bi-whatsapp fs-3"></i>
@@ -524,7 +645,7 @@
                             <hr />
                         </div>
                         <div class="mt-1">
-                            <p>Support by <b>Kiigeeks</b></p>
+                            <p>&copy; Copyright <b>HDI Store</b> 2023</p>
                         </div>
                     </div>
                 </div>
@@ -534,7 +655,7 @@
         <!-- swiperjs -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
-            var swiper = new Swiper(".carosel-swiper", {
+            var swiper1 = new Swiper(".carosel-swiper", {
                 spaceBetween: 30,
                 effect: "fade",
                 autoplay: {
@@ -565,6 +686,12 @@
                 breakpoints: {
                     769: {
                         centeredSlides: false,
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                        slidesPerGroup: 2,
+                    },
+                    993: {
+                        centeredSlides: false,
                         slidesPerView: 4,
                         spaceBetween: 15,
                         slidesPerGroup: 2,
@@ -584,5 +711,11 @@
 
         <!-- cdn bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <!-- aos -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ once: true });
+        </script>
     </body>
 </html>

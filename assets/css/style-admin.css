@@ -7,8 +7,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #eff2f5;
+    background-color: #e4eff9;
     font-family: var(--primary-font);
+}
+
+footer {
+    border-top: 1px solid #b8b8b8;
+    margin-top: 150px;
 }
 
 .title h2::before {
@@ -175,18 +180,6 @@ body {
 
 .count-transaction {
     font-size: 50px;
-}
-
-.nav-img {
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 /* if more than 768 */

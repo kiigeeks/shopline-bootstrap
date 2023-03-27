@@ -5,13 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <title>Search</title>
+        <title>Login Page</title>
 
         <!-- bootstrap icon  -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 
         <!-- cdn bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+        <!-- swiperjs -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
         <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -117,179 +120,46 @@
             </div>
         </div>
 
-        <!-- categories -->
-        <section class="pt-5 container mt-5 px-lg-5">
+        <!-- main -->
+        <section class="pt-5 container mt-5 px-lg-5 main-signin">
             <div class="container">
-                <div class="row mb-4">
-                    <div class="col">
-                        <div class="title mx-2" data-aos="fade-up">
-                            <h2 class="position-relative d-inline-block">Categories</h2>
+                <div class="row mb-4 justify-content-center gap-5">
+                    <div class="d-none d-md-block col-md-4 p-3 mt-md-5 order-md-1 order-2" data-aos="fade-right">
+                        <h1 class="d-inline-block">HDI Store.</h1>
+                        <h4>Belanja Produk HDI, menjadi lebih mudah</h4>
+                    </div>
+                    <div class="col-lg-4 col-md-6 p-3 order-md-2 order-1" data-aos="fade-left">
+                        <div class="bg-white py-3 px-4 w-100 rounded shadow-sm">
+                            <form action="" class="form-signin m-auto">
+                                <h3 class="position-relative d-inline-block">Sign Up</h3>
+                                <div class="form-group mt-3">
+                                    <label for="">First Name</label>
+                                    <input type="text" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="">Last Name</label>
+                                    <input type="text" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="">Phone Number</label>
+                                    <input type="number" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="">Email Address</label>
+                                    <input type="email" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="">Password</label>
+                                    <input type="password" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="">Confirm Password</label>
+                                    <input type="password" class="form-control w-100 bg-secondary-subtle" />
+                                </div>
+                                <a href="/login.html" class="btn btn-primary btn-block w-100 mt-4">Registration</a>
+                                <a href="#" class="btn btn-outline-danger btn-block w-100 mt-2 mb-2">Back</a>
+                            </form>
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-2 flex flex-wrap">
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/healthy.png" alt="" class="w-25" />
-                            <p class="title-category">Health Nutritions</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/beauty.png" alt="" class="w-25" />
-                            <p class="title-category">Beauty Skincare</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <a href="products.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/bodycare.png" alt="" class="w-25" />
-                            <p class="title-category">Body Care</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <a href="penyakit.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/penyakit.png" alt="" class="w-25" />
-                            <p class="title-category">Diseases</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="500">
-                        <a href="testimonial.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/testimonial.png" alt="" class="w-25" />
-                            <p class="title-category">Testimonial</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 mt-3 mt-md-4 mt-lg-4" data-aos="fade-up" data-aos-delay="600">
-                        <a href="article.html" class="text-decoration-none text-black bg-white rounded shadow-sm px-2.5 py-3 d-flex gap-2 flex-column align-items-center">
-                            <img src="assets/icons/article.png" alt="" class="w-25" />
-                            <p class="title-category">Articles</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- search -->
-        <section class="pt-5 container mt-5 px-lg-5">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col">
-                        <div class="title mx-2" data-aos="fade-up">
-                            <h2 class="position-relative d-inline-block">"Your Search"</h2>
-                        </div>
-                    </div>
-                </div>
-                <!-- not found -->
-                <!-- <div class="row mt-5">
-                    <div class="col">
-                        <h1 class="fst-italic">Data Not Found</h1>
-                    </div>
-                </div> -->
-                <div class="row mt-3">
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Product title 5</h5>
-                                <span class="badge text-bg-secondary">Body Care</span>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-product.html" class="btn btn-primary">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="150">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Product title 6</h5>
-                                <span class="badge text-bg-secondary">Body Care</span>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-product.html" class="btn btn-primary">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Product title 7</h5>
-                                <span class="badge text-bg-secondary">Beauty</span>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-product.html" class="btn btn-primary">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="250">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Product title 8</h5>
-                                <span class="badge text-bg-secondary">Beauty</span>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-product.html" class="btn btn-primary">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Article title 5</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-article.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="350">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Article title 8</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-article.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Article title 7</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-article.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-3" data-aos="fade-up" data-aos-delay="450">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aG9uZXl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Article title 6</h5>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="single-article.html" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- pagination -->
-                <div class="row mt-5 justify-content-end">
-                    <div class="col-6">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item disabled">
-                                    <a class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

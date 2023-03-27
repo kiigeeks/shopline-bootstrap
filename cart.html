@@ -16,25 +16,44 @@
         <!-- swiperjs -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+        <!-- aos -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white">
-            <div class="container px-md-5">
-                <a class="navbar-brand fs-4 fw-bold" href="index.html">SHOPLINE.</a>
-                <div class="order-md-2 d-flex flex-row gap-3">
-                    <a href="cart.html">
-                        <button class="border-0 position-relative bg-white">
-                            <i class="bi bi-cart-fill fs-5"></i>
-                            <span class="fw-light position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
-                        </button>
-                    </a>
-                    <button class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-white" data-aos="fade-down">
+            <div class="container px-lg-5">
+                <a class="navbar-brand fs-4 fw-bold" href="index.html">HDI STORE.</a>
+                <div class="order-lg-2 d-flex flex-row gap-3">
+                    <button class="border-0 bg-white ms-3" data-bs-toggle="modal" data-bs-target="#searchModal">
                         <i class="bi bi-search fs-5"></i>
                     </button>
+
+                    <!-- <div class="dropdown d-none d-lg-block">
+                        <button class="border-0 bg-white justify-content-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill fs-3"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="transactions.html">Transaction</a></li>
+                            <hr class="hr-menu mx-auto">
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </div> -->
+
+                    <a href="cart.html">
+                        <button class="border-0 position-relative bg-white">
+                            <i class="bi bi-cart-fill fs-4"></i>
+                            <span class="fw-light position-absolute mt-1 top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 10px">5</span>
+                        </button>
+                    </a>
+
+                    <a class="d-none d-lg-block btn btn-success ms-3" href="login.html">SIGN IN</a>
+                    <a class="d-none d-lg-block btn border-0 btn-signup" href="registrasi.html">SIGN UP</a>
                 </div>
-                <button class="navbar-toggler order-md-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler order-lg-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -46,8 +65,34 @@
                             <a class="nav-link links text-uppercase" href="products.html">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link links text-uppercase" href="article.html">Article</a>
+                            <a class="nav-link links text-uppercase" href="penyakit.html">Diseases</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="testimonial.html">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links text-uppercase" href="article.html">Articles</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <hr />
+                        </li>
+                        <!-- kalau belum login  -->
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="login.html">Sign In</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="registrasi.html">Sign Up</a>
+                        </li>
+                        <!-- kalau sudah login  -->
+                        <!-- <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="dashboard.html">Hi, Orang</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="transactions.html">Transaction</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="nav-link links text-uppercase" href="#">Sign Out</a>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -76,35 +121,35 @@
         </div>
 
         <!-- list cart -->
-        <section class="pt-5 container mt-5 px-md-5">
+        <section class="pt-5 container mt-5 px-lg-5">
             <div class="container">
                 <!-- title -->
                 <div class="row">
-                    <div class="col text-center">
+                    <div class="col text-center" data-aos="fade-up">
                         <h1 class="fw-light fs-1">Your Bag</h1>
                     </div>
                 </div>
                 <!-- button -->
                 <div class="row mt-3">
-                    <div class="col-md-6 text-md-end text-center">
+                    <div class="col-md-6 text-md-end text-center" data-aos="fade-right">
                         <a href="products.html">
                             <button class="border-1 px-4 py-3 rounded btnCart text-uppercase">Continue Shopping</button>
                         </a>
                     </div>
-                    <div class="d-none d-md-block col-6">
+                    <div class="d-none d-md-block col-6" data-aos="fade-left">
                         <button class="border-1 px-4 py-3 rounded btnCheckout text-uppercase" data-bs-toggle="modal" data-bs-target="#modalOrder">Checkout Now</button>
                     </div>
                 </div>
                 <!-- content -->
                 <div class="row mt-5">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <div class="container py-1 px-3 d-flex flex-column">
-                            <div class="row mb-3">
+                            <div class="row mb-3" data-aos="fade-up">
                                 <div class="col">
                                     <h3 class="text-uppercase fw-ligth mt-2">List Products (3)</h3>
                                 </div>
                             </div>
-                            <div class="row mt-2 mb-1">
+                            <div class="row mt-2 mb-1" data-aos="fade-up" data-aos-delay="100">
                                 <div class="col-md-2 col-6 text-center">
                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Product" class="img-md-fluid rounded mx-auto" width="100" height="100" />
                                 </div>
@@ -127,14 +172,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                            <div class="row mt-2 mb-1">
+                            <hr data-aos="fade-up" data-aos-delay="100" />
+                            <div class="row mt-2 mb-1" data-aos="fade-up" data-aos-delay="200">
                                 <div class="col-md-2 col-6 text-center">
                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Product" class="img-md-fluid rounded mx-auto" width="100" height="100" />
                                 </div>
                                 <div class="col-6">
                                     <div class="mt-2 d-flex flex-column gap-2">
-                                        <h5>Title Product 2</h5>
+                                        <h5>Title Product Product Product Product Product Product Product2</h5>
                                         <p>$ 20.00</p>
                                     </div>
                                 </div>
@@ -151,8 +196,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
-                            <div class="row mt-2 mb-1">
+                            <hr data-aos="fade-up" data-aos-delay="200" />
+                            <div class="row mt-2 mb-1" data-aos="fade-up" data-aos-delay="300">
                                 <div class="col-md-2 col-6 text-center">
                                     <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="Product" class="img-md-fluid rounded mx-auto" width="100" height="100" />
                                 </div>
@@ -175,10 +220,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr />
+                            <hr data-aos="fade-up" data-aos-delay="300" />
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="col-lg-4 mt-lg-0 mt-4" data-aos="fade-up">
                         <div class="d-flex flex-column py-2 px-3 border border-dark">
                             <h3 class="text-uppercase fw-ligth">Order Summary</h3>
                             <div class="mt-3 d-flex justify-content-between mb-3">
@@ -257,19 +302,19 @@
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <div class="title mx-2">
+                        <div class="title mx-2" data-aos="fade-up">
                             <h2 class="position-relative d-inline-block">Recommendation</h2>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="d-flex justify-content-end">
+                        <div class="d-flex justify-content-end" data-aos="fade-up">
                             <a href="products.html" class="mt-2 text-end fw-light text-decoration-none text-black linkMore">More Products</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="swiper">
+                        <div class="swiper" data-aos="fade-up" data-aos-delay="100">
                             <div class="px-5 pb-5 recom-swiper">
                                 <div class="swiper-wrapper">
                                     <div class="card mx-2 swiper-slide">
@@ -388,60 +433,72 @@
         </section>
 
         <!-- footer -->
-        <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-md-5 p-3">
-            <div class="container px-md-5">
+        <footer style="background-color: rgb(17 24 39)" class="text-white mt-5 p-lg-5 p-md-2 p-3">
+            <div class="container px-lg-5">
                 <div class="row">
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="col-md-6 col-lg-4 mt-lg-0 mt-4" data-aos="fade-up">
                         <div class="p-md-3 d-flex flex-column">
-                            <h2 class="fw-bold fs-4">SHOPLINE.</h2>
-                            <p class="fs-6 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea unde doloremque molestias ipsam numquam alias accusamus quam a! Laborum, amet.</p>
+                            <h2 class="fw-bold fs-4">HDI STORE.</h2>
+                            <p class="fs-6 fw-light text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea unde doloremque molestias ipsam numquam alias accusamus quam a! Laborum, amet.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="col-md-6 col-lg-4 mt-lg-0 mt-4" data-aos="fade-up">
                         <div class="p-md-3 d-flex flex-md-row flex-column justify-content-around">
                             <ul class="list-unstyled">
                                 <li class="">
                                     <a href="index.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Home
                                     </a>
                                 </li>
                                 <li class="">
                                     <a href="products.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Products
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="article.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
-                                        Article
+                                    <a href="penyakit.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Diseases
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="testimonial.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Testimonial
                                     </a>
                                 </li>
                             </ul>
                             <ul class="list-unstyled">
                                 <li class="">
-                                    <a href="index.html#check" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
-                                        Transaction
+                                    <a href="article.html" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        Articles
                                     </a>
                                 </li>
                                 <li class="">
                                     <a href="cart.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         Cart
                                     </a>
                                 </li>
                                 <li class="">
+                                    <a href="index.html#us" class="text-decoration-none text-white">
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="">
                                     <a href="faq.html" class="text-decoration-none text-white">
-                                        <img width="30" height="30" class="text-white" src="assets/img/ul-li.png" alt="" />
+                                        <img width="30" height="30" class="text-white" src="assets/icons/ul-li.png" alt="" />
                                         FAQ
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="d-none d-lg-block col-lg-4 mt-md-0 mt-4" data-aos="fade-up">
                         <div class="p-md-3 d-flex flex-column">
                             <h5 class="fw-semibold">Contact</h5>
                             <div class="d-flex flex-row mt-1 mx-2 gap-3">
@@ -461,16 +518,10 @@
                     </div>
                 </div>
                 <div class="row mt-md-4 mt-5">
-                    <div class="col text-center d-flex flex-column">
+                    <div class="col text-center d-flex flex-column" data-aos="fade-up">
                         <div class="d-flex flex-row gap-4 justify-content-center">
                             <a href="#" class="text-white">
                                 <i class="bi bi-instagram fs-3"></i>
-                            </a>
-                            <a href="#" class="text-white">
-                                <i class="bi bi-facebook fs-3"></i>
-                            </a>
-                            <a href="#" class="text-white">
-                                <i class="bi bi-youtube fs-3"></i>
                             </a>
                             <a href="#" class="text-white">
                                 <i class="bi bi-whatsapp fs-3"></i>
@@ -480,7 +531,7 @@
                             <hr />
                         </div>
                         <div class="mt-1">
-                            <p>Support by <b>Kiigeeks</b></p>
+                            <p>&copy; Copyright <b>HDI Store</b> 2023</p>
                         </div>
                     </div>
                 </div>
@@ -504,6 +555,12 @@
                 breakpoints: {
                     769: {
                         centeredSlides: false,
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                        slidesPerGroup: 2,
+                    },
+                    993: {
+                        centeredSlides: false,
                         slidesPerView: 4,
                         spaceBetween: 15,
                         slidesPerGroup: 2,
@@ -523,5 +580,11 @@
 
         <!-- cdn bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <!-- aos -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({ once: true });
+        </script>
     </body>
 </html>
