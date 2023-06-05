@@ -1,11 +1,10 @@
 # shopline-bootstrap
 
-Simple responsive E-Commerce using Bootstrap without login, user can track their order with invoice number.
+Simple responsive E-Commerce using Bootstrap.
 
 ### Feature
 
 -   Carousel promo product with swiper
--   Check invoice code
 -   Categories product
 -   Best Seller
 -   News Article
