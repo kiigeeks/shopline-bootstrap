@@ -189,6 +189,50 @@ body {
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
+.profile-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* .btn-file {
+    border: 2px solid #ccc;
+    color: #333;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+} */
+
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.responsive-img {
+    width: 70%;
+    height: auto;
+}
+
 /* if more than 768 */
 /* @media (min-width: ≥768px) {
     .responsive-font-example {
@@ -217,6 +261,10 @@ body {
     .count-transaction {
         font-size: 40px;
     }
+
+    .responsive-img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -242,5 +290,9 @@ body {
 
     .member-price {
         font-size: 1.3rem;
+    }
+
+    .responsive-img {
+        width: 100%;
     }
 }

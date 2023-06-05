@@ -142,21 +142,101 @@
                 <div class="row mt-5" data-aos="fade-up" data-aos-delay="100">
                     <div class="col">
                         <div class="bg-white py-3 px-4 w-100 rounded shadow-sm">
-                            <h3 class="position-relative d-inline-block">Profile</h3>
+                            <h3 class="position-relative d-inline-block">Your Profile</h3>
+                            <form class="g-3 mt-2">
+                                <div class="row g-3 mt-1">
+                                    <div class="col-md-3">
+                                        <div class="row mt-md-5">
+                                            <div class="col-md-12 d-flex flex-column gap-3 align-items-center">
+                                                <img src="/assets/icons/blank-people.jpg" alt="Profile Pictures" class="profile-img" />
+                                                <div class="file-upload mb-md-3 mb-2">
+                                                    <button class="btn btn-info" type="button">Pilih File</button>
+                                                    <input type="file" name="file" id="file" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="row g-3 mt-1">
+                                            <div class="col-lg-3 col-md-6">
+                                                <label for="inputFirst" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="inputFirst" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <label for="inputLast" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="inputLast" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <label for="inputEmail4" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="inputEmail4" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <label for="inputPhone" class="form-label">Phone Number</label>
+                                                <input type="number" class="form-control" id="inputPhone" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputLastPassword" class="form-label">Last Password</label>
+                                                <input type="password" class="form-control" id="inputLastPassword" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="inputNewPassword" class="form-label">New Password</label>
+                                                <input type="password" class="form-control" id="inputNewPassword" />
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="inputAddress" class="form-label">Address</label>
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="inputProvince" class="form-label">Province</label>
+                                                <select id="inputProvince" class="form-select">
+                                                    <option selected>Choose...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="inputProvince" class="form-label">City</label>
+                                                <select id="inputProvince" class="form-select">
+                                                    <option selected>Choose...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="inputPostal" class="form-label">Postal Code</label>
+                                                <input type="text" class="form-control" id="inputPostal" />
+                                            </div>
+                                            <div class="col-12 mt-5">
+                                                <button type="submit" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row mt-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col">
+                        <div class="bg-white py-3 px-4 w-100 rounded shadow-sm">
+                            <h3 class="position-relative d-inline-block">Your Profile</h3>
                             <form class="row g-3 mt-3">
-                                <div class="col-md-6">
+                                <div class="col-md-12 d-flex flex-column gap-2 align-items-center align-items-md-start">
+                                    <img src="/assets/icons/blank-people.jpg" alt="Profile Pictures" class="profile-img" />
+                                    <div class="file-upload ms-0 ms-md-4 mb-md-3 mb-2">
+                                        <button class="btn btn-info" type="button">Pilih File</button>
+                                        <input type="file" name="file" id="file" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
                                     <label for="inputFirst" class="form-label">First Name</label>
                                     <input type="text" class="form-control" id="inputFirst" />
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-3 col-md-6">
                                     <label for="inputLast" class="form-label">Last Name</label>
                                     <input type="text" class="form-control" id="inputLast" />
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-3 col-md-6">
                                     <label for="inputEmail4" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="inputEmail4" />
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-3 col-md-6">
                                     <label for="inputPhone" class="form-label">Phone Number</label>
                                     <input type="number" class="form-control" id="inputPhone" />
                                 </div>
@@ -172,32 +252,29 @@
                                     <label for="inputAddress" class="form-label">Address</label>
                                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
                                 </div>
-                                <div class="col-12">
-                                    <label for="inputAddress2" class="form-label">Address 2</label>
-                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputCity" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="inputCity" />
-                                </div>
                                 <div class="col-md-4">
-                                    <label for="inputState" class="form-label">State</label>
-                                    <select id="inputState" class="form-select">
+                                    <label for="inputProvince" class="form-label">Province</label>
+                                    <select id="inputProvince" class="form-select">
                                         <option selected>Choose...</option>
-                                        <option>...</option>
                                     </select>
                                 </div>
-                                <div class="col-md-2">
-                                    <label for="inputZip" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="inputZip" />
+                                <div class="col-md-4">
+                                    <label for="inputProvince" class="form-label">City</label>
+                                    <select id="inputProvince" class="form-select">
+                                        <option selected>Choose...</option>
+                                    </select>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-4">
+                                    <label for="inputPostal" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="inputPostal" />
+                                </div>
+                                <div class="col-12 mt-5">
                                     <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -314,6 +391,17 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({ once: true });
+            var input = document.getElementById("file");
+            var button = document.querySelector(".btn");
+            var label = button.textContent;
+
+            input.addEventListener("change", function () {
+                if (input.value) {
+                    button.textContent = input.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                } else {
+                    button.textContent = label;
+                }
+            });
         </script>
     </body>
 </html>
